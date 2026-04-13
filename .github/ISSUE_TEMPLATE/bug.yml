@@ -1,0 +1,92 @@
+name: Bug report
+description: Something isn't working as expected
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report. Please fill in as much as you can — it saves triage time.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+      placeholder: |
+        Steps to reproduce:
+        1. ...
+        2. ...
+
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+
+  - type: input
+    id: cctint-version
+    attributes:
+      label: cctint version
+      description: Output of `cctint --help` shows version info if set; otherwise your git SHA or install date.
+    validations:
+      required: true
+
+  - type: input
+    id: term-program
+    attributes:
+      label: TERM_PROGRAM
+      description: Output of `echo $TERM_PROGRAM`
+      placeholder: iTerm.app
+    validations:
+      required: true
+
+  - type: input
+    id: shell
+    attributes:
+      label: Shell
+      description: zsh / bash / fish / etc. — and version (`$SHELL --version`)
+    validations:
+      required: true
+
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      description: Output of `sw_vers -productVersion`
+    validations:
+      required: true
+
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      description: bun or node? Output of `bun --version` or `node --version`.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Contents of `~/.config/cctint/log/cctint.log` (if it exists).
+        Enable debug logging by setting `"logLevel": "debug"` in `~/.config/cctint/config.json`.
+      render: text
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Config
+      description: Contents of `~/.config/cctint/config.json` (redact anything sensitive).
+      render: json
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Sanity checks
+      description: Quick things that fix 80% of issues
+      options:
+        - label: "`cctint reset` manually reverts the terminal color"
+        - label: "`echo '{}' | cctint hook SessionStart` tints the terminal green"
+        - label: "I've tried opening a fresh iTerm2 window (not re-sourcing the existing shell)"
+        - label: "I'm running macOS + iTerm2 (the only supported combo in v1)"

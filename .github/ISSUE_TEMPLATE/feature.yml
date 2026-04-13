@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest an idea or improvement
+title: "[feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea? Great. A clear problem statement gets a better response than a vague wishlist.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem?
+      description: What are you trying to do that cctint doesn't support? What's the user experience today?
+      placeholder: |
+        When I... I expect... but instead...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: What would you like cctint to do? Config schema? CLI flag? New hook?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches you thought about and why they're not as good.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      description: Rough guess at the size of the change
+      options:
+        - Small (config key, minor behavior)
+        - Medium (new command, new state, new backend)
+        - Large (architectural change)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contributing
+    attributes:
+      label: Would you contribute this?
+      options:
+        - label: I'd like to open a PR for this (please confirm the approach first)
+        - label: I can help test / review

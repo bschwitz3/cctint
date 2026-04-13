@@ -1,0 +1,33 @@
+{
+  "name": "cctint",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Tint the iTerm2 terminal background based on Claude Code session state.",
+  "bin": {
+    "cctint": "dist/cctint.js"
+  },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "build": "bun build src/cli.ts --outfile dist/cctint.js --target=node",
+    "build:bin": "bun build src/cli.ts --compile --outfile dist/cctint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit && eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.12.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
