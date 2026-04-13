@@ -18,7 +18,7 @@ Tint the iTerm2 background from **Claude Code** session state so many tabs stay 
 
 [![cctint demo — iTerm2 backgrounds following Claude Code state](./docs/cctint-demo-poster.png)](https://github.com/bschwitz3/cctint/raw/main/docs/cctint-demo.mp4)
 
-Source in repo: [`docs/cctint-demo.mp4`](./docs/cctint-demo.mp4) (H.264 MP4, max width 1280px, no audio track).
+Source in repo: [`docs/cctint-demo.mp4`](./docs/cctint-demo.mp4)
 
 ## Requirements
 
