@@ -14,6 +14,14 @@ Tint the iTerm2 background from **Claude Code** session state so many tabs stay 
 | `waiting` | muted red    | Blocked on approval / prompt   |
 | `error`   | deep red     | Tool failed, denied, or crash  |
 
+## Demo
+
+Screen recording (MP4, no audio): **click the image** to open the file in your browser (GitHub “raw” URL — plays inline in most browsers).
+
+[![cctint demo — iTerm2 backgrounds following Claude Code state](./docs/cctint-demo-poster.jpg)](https://github.com/bschwitz3/cctint/raw/main/docs/cctint-demo.mp4)
+
+Source in repo: [`docs/cctint-demo.mp4`](./docs/cctint-demo.mp4) (H.264 MP4, max width 1280px, no audio track).
+
 ## Requirements
 
 macOS · iTerm2 · [Bun](https://bun.sh) to **build** · Bun or Node ≥18 at runtime · zsh or bash (for the exit `trap`)
